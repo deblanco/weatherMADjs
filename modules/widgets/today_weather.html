@@ -1,0 +1,30 @@
+<today-weather filters="$ctrl.filters" model="model">
+    <div class="col-md-6">
+        <div class="colGap">
+            <div class="title-weather">Tiempo para hoy</div>
+            <div class="row">
+                <div class="col-md-4">{{model.summary}}</div>
+                <div class="col-md-4 today-weather-wind">
+                    <span class="wi wi-wind towards-{{model.windBearing}}-deg"></span>
+                    {{model.windSpeed}} km/h
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        Amanece: {{model.sunriseTime * 1000 | date: 'hh:mm:ss'}}
+                        Puesta de sol: {{model.sunsetTime * 1000 | date: 'hh:mm:ss'}}
+                    </p>
+                </div>
+            </div>
+            <div class="today-temp">
+                <div class="row">
+                    <div class="col-md-6 min-temp">
+                        Temperatura Min: {{model.temperatureMin | number:0}}° C
+                    </div>
+                    <div class="col-md-6 max-temp">
+                        Temperatura Max: {{model.temperatureMax | number:0}}° C
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</today-weather>

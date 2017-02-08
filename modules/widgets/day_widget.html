@@ -1,0 +1,26 @@
+<day-widget filters="$ctrl.filters" model="model">
+    <div ng-repeat="m in model">
+        <div class="col-md-3">
+            <div class="colGap">
+                <div class="title-weather">{{m.time * 1000 | date: "longDate"}}</div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-4"><skycon icon="m.icon" size="60"></div>
+                    <div class="col-md-8">{{m.summary}}</div>
+                </div>
+                <div class="day-widget-temp">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4 min-temp">
+                            {{m.temperatureMin | number:0}}° C
+                        </div>
+                        <div class="col-md-4 col-xs-4 max-temp">
+                            {{m.temperatureMax | number:0}}° C
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <i class="wi wi-rain"></i> {{m.precipProbability * 100 | number: 0}}%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</day-widget>

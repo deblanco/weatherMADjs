@@ -1,0 +1,7 @@
+<div ng-controller="WeatherController as $ctrl">
+    <div class="row">
+        <div ng-repeat="widget in $ctrl.widgets">
+            <ng-include src="widget"></ng-include>
+        </div>
+    </div>
+</div>

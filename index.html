@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="weatherMAD" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="weatherMAD" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="weatherMAD" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="weatherMAD" class="no-js"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherMAD - Daniel Blanco Parla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/weather-icons.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/weather-icons-wind.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/app.css"/>
+    <base href="/">
+<body>
+
+<navigation-bar></navigation-bar>
+<div class="container">
+    <!--Aqui se mostran los View-Models (vm)-->
+    <div ng-view></div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">&copy; 2017 -
+            <a href="https://www.linkedin.com/in/daniel-blanco-parla-5aa8a424/" title="linkedin">
+                Daniel Blanco Parla
+            </a>
+        <br />
+            API <a href="https://darksky.net/poweredby/" title="Powered by Dark Sky">
+            Powered by Dark Sky</a>
+        </p>
+    </div>
+</footer>
+
+<!-- build:js js/console.js -->
+<!-- main.js bundle -->
+<script src="lib/deps.js"></script>
+<script src="lib/vendor.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

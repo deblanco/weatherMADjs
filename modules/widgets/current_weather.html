@@ -1,0 +1,15 @@
+<current-weather filters="$ctrl.filters" model="model">
+    <div class="col-md-6">
+        <div class="colGap">
+            <div class="row">
+                <div class="col-md-3 col-xs-4">
+                    <skycon icon="model.icon" size="120">
+                </div>
+                <div class="col-md-9 col-xs-8">
+                    <h1>{{$ctrl.filters.city}}</h1>
+                    <h4>{{model.summary}}, {{model.temperature | number:0}}° C</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</current-weather>

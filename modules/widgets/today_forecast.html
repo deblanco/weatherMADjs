@@ -1,0 +1,31 @@
+<today-forecast filters="$ctrl.filters" model="model">
+    <div class="col-md-12">
+        <div class="colGap">
+            <div class="title-weather">Previsión para las próximas horas</div>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <th>HORA</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>% PRECIPITACIÓN</th>
+                    <th>TEMP</th>
+                    <th>HUMEDAD</th>
+                    <th>VIENTO</th>
+                    </thead>
+                    <tbody ng-repeat="m in model">
+                    <tr>
+                        <td>{{m.time * 1000 | date: "HH:mm"}}</td>
+                        <td><skycon icon="m.icon" size="20"></skycon> {{m.summary}}</td>
+                        <td><i class="wi wi-rain"></i> {{m.precipProbability * 100 | number: 0}}%</td>
+                        <td>{{m.temperature | number:0}}° C</td>
+                        <td>{{m.humidity}} %</td>
+                        <td><span class="wi wi-wind towards-{{m.windBearing}}-deg"></span> {{m.windSpeed}} km/h</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</today-forecast>
