@@ -22,7 +22,7 @@
             // https://darksky.net/
             $http({
                 method: 'GET',
-                url: 'http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + APIKEY + '/' + filter + '/?lang=es&units=auto',
+                url: 'https://api.darksky.net/forecast/' + APIKEY + '/' + filter + '/?lang=es&units=auto&callback=?',
                 cache: true,
                 timeout: 3000
             })
